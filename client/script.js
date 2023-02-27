@@ -107,12 +107,13 @@ const handleSubmit = async (e) => {
   }
 }
 
-
 form.addEventListener('submit', handleSubmit);
-form.addEventListener('keyup').addEventListener('click', (e) => {
-    e.preventDefault();
+
+form.addEventListener('keyup', (e) => {
+  if(e.keyCode === 13){
     handleSubmit(e);
-  });
+  }
+})
 
 /*  BACKGROUND SWITH */
 

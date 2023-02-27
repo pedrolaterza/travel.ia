@@ -77,6 +77,12 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
+  form.addEventListener('submit', handleSubmit);
+document.querySelector('#submit-button').addEventListener('click', (e) => {
+    e.preventDefault();
+    handleSubmit(e);
+  });
+
   //fetch data from server ->  bot's response 
 
   const response = await fetch('https://travel-hqho.onrender.com', {
